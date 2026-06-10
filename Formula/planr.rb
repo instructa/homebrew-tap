@@ -1,26 +1,26 @@
 class Planr < Formula
   desc "Local-first planning and execution coordination for coding agents"
   homepage "https://github.com/instructa/planr"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/instructa/planr/releases/download/v1.1.0/planr-darwin-arm64.tar.gz"
-      sha256 "a3e1d23a7618d38eff905a5d86845ba00b82c2be2a4961726bd41836c3b84989"
+      url "https://github.com/instructa/planr/releases/download/v1.1.1/planr-darwin-arm64.tar.gz"
+      sha256 "aa4c6cd8f48d123597fe184781f8d668af748ad695ab8d7f9f9b2ab8faddf493"
     else
-      url "https://github.com/instructa/planr/releases/download/v1.1.0/planr-darwin-x86_64.tar.gz"
-      sha256 "66ee8bafe8d38ffce0ce5abdf1a8b48077c9e490499d39204c2252adb2f5f037"
+      url "https://github.com/instructa/planr/releases/download/v1.1.1/planr-darwin-x86_64.tar.gz"
+      sha256 "1e4eb62eb0dc0bfab50c4183faeda82358a3d15a4cf50b73ebb4f6684098beee"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/instructa/planr/releases/download/v1.1.0/planr-linux-arm64.tar.gz"
-      sha256 "7b914c99ba789bfcada80eab26d4f88bef65716ce97769d67b9a1f66990d03c3"
+      url "https://github.com/instructa/planr/releases/download/v1.1.1/planr-linux-arm64.tar.gz"
+      sha256 "de0f4117bf92ebfd6183e52e3185f17b6f6ac1dd9e7f62fa88e688c5680f7aeb"
     else
-      url "https://github.com/instructa/planr/releases/download/v1.1.0/planr-linux-x86_64.tar.gz"
-      sha256 "3e2f1bc8658d05cf81cfa25871ebddb7f745580f08d6552f85892acc2b99bdc0"
+      url "https://github.com/instructa/planr/releases/download/v1.1.1/planr-linux-x86_64.tar.gz"
+      sha256 "ca759883c4d2a7db857fc9784d33b3ab3c8ee8a4bdb1cea9996060fdb3f88749"
     end
   end
 
