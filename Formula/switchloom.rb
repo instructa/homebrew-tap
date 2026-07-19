@@ -1,26 +1,26 @@
 class Switchloom < Formula
   desc "Deterministic model routing for coding agents"
   homepage "https://github.com/instructa/switchloom"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/instructa/switchloom/releases/download/v0.2.0/switchloom-darwin-arm64.tar.gz"
-      sha256 "028e1de5218b0493d826c1043551330e3581f677722c5597ff7dc6bc59b294a6"
+      url "https://github.com/instructa/switchloom/releases/download/v0.2.1/switchloom-darwin-arm64.tar.gz"
+      sha256 "2ec8344ecd38b41d4af47a77f6d5ff7882d4298ea73555d4c7cffa984dcdea0d"
     else
-      url "https://github.com/instructa/switchloom/releases/download/v0.2.0/switchloom-darwin-x86_64.tar.gz"
-      sha256 "dcb18b7d782a91b439b8c45623ee3de5dcf574789d33438567390b4994b6e046"
+      url "https://github.com/instructa/switchloom/releases/download/v0.2.1/switchloom-darwin-x86_64.tar.gz"
+      sha256 "fc70d0b52c9b0e4932a505debba8d2aa75e0478189574f928fef6fdd312faf5b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/instructa/switchloom/releases/download/v0.2.0/switchloom-linux-arm64.tar.gz"
-      sha256 "73af0de9b07e9095c6ef9798596f93668ea038b2f52d70ec9a37f97ff34cb50e"
+      url "https://github.com/instructa/switchloom/releases/download/v0.2.1/switchloom-linux-arm64.tar.gz"
+      sha256 "561ebc772633f285326c08a3a9b9a8b2316bde0ea99f0d9a32def4a1838bf355"
     else
-      url "https://github.com/instructa/switchloom/releases/download/v0.2.0/switchloom-linux-x86_64.tar.gz"
-      sha256 "a6be2974ce3b7ddf12f989931c458d619bf5740069803733ac1edb29a3054217"
+      url "https://github.com/instructa/switchloom/releases/download/v0.2.1/switchloom-linux-x86_64.tar.gz"
+      sha256 "0ba788c46404892f7bd7c1828eb9a52e9b92b6deba64bf71fed5eb3d39728deb"
     end
   end
 
