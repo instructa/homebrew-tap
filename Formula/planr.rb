@@ -1,34 +1,25 @@
 class Planr < Formula
-  desc "Local-first planning and execution coordination for coding agents"
-  homepage "https://github.com/instructa/planr"
-  version "1.9.0"
+  desc "Planning CLI for Markdown task graphs"
+  homepage "https://planr.so"
+  url "https://registry.npmjs.org/planr/-/planr-2.0.0.tgz"
+  sha256 "61d6e8295d8280f0615ebb6ceca30da1063cf2e0e67750f84bcae171df2abb1a"
   license "MIT"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/instructa/planr/releases/download/v1.9.0/planr-darwin-arm64.tar.gz"
-      sha256 "752224e3d78b8c4dcf4a23fc6aeb2b41cdfb19b3d383cd9c4dca18bae1f2d5ac"
-    else
-      url "https://github.com/instructa/planr/releases/download/v1.9.0/planr-darwin-x86_64.tar.gz"
-      sha256 "110301cf56cdc71719ba4db971031765af20056cf593fced416ffae4445b1ccb"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm?
-      url "https://github.com/instructa/planr/releases/download/v1.9.0/planr-linux-arm64.tar.gz"
-      sha256 "4e4659be0620082d0b494a7dff3ce7e4931808363bdb878f55373c8bae010e74"
-    else
-      url "https://github.com/instructa/planr/releases/download/v1.9.0/planr-linux-x86_64.tar.gz"
-      sha256 "d5dc9d8106b3d584c7751e6346acb0755656bd12995e1bba497568db9686cc96"
-    end
-  end
+  depends_on "node"
 
   def install
-    bin.install "planr"
+    system "npm", "install", *std_npm_args
+    bin.install_symlink libexec/"lib/node_modules/planr/skills/planr/scripts/planr.mjs" => "planr"
+  end
+
+  def caveats
+    <<~EOS
+      planr 2.0 is a rebuild and does not read 1.x data.
+      Version 1.x remains available: brew install instructa/tap/planr@1
+    EOS
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/planr --version")
+    assert_equal "planr 2.0.0\n", shell_output("#{bin}/planr --version")
   end
 end
