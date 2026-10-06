@@ -5,6 +5,8 @@ class Planr < Formula
   sha256 "61d6e8295d8280f0615ebb6ceca30da1063cf2e0e67750f84bcae171df2abb1a"
   license "MIT"
 
+  deprecate! date: "2026-10-06", because: "is installed with npm: npm install -g planr"
+
   depends_on "node"
 
   def install

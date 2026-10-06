@@ -6,6 +6,8 @@ class PlanrAT1 < Formula
 
   keg_only :versioned_formula
 
+  deprecate! date: "2026-10-06", because: "is installed with npm: npm install -g planr@1"
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/instructa/planr/releases/download/v1.9.0/planr-darwin-arm64.tar.gz"
